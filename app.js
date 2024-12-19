@@ -7,7 +7,7 @@ const blogRoutes = require('./routes/blogRoutes.js')
 const categoryRoutes = require('./routes/categoryRoutes.js')
 const courseRoutes = require('./routes/courseRoutes.js')
 const courseDetailRoutes = require('./routes/courseDetailRoutes.js'); // 
-
+const pricingRoutes = require('./routes/pricingRoutes.js')
 dotenv.config();
 const app = express();
 const cors = require('cors');
@@ -31,4 +31,6 @@ app.use('/api/blog', blogRoutes);
 app.use('/api/categories', categoryRoutes);
 app.use('/api/courses', courseRoutes);
 app.use('/api/course-details', courseDetailRoutes);
+app.use('/api/pricing', pricingRoutes)
+
 module.exports = app;
